@@ -13,6 +13,11 @@ const connect = () => {
     console.log(`message from server: ${message}`);
   });
 
+	conn.on('connect', () => {
+		console.log(`connected to the server`);
+		conn.write(`Name: ANK`)
+	})
+
   return conn;
 
 };
