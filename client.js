@@ -1,5 +1,5 @@
 const net = require('net');
-const { IP, PORT} = require('./constants')
+const { IP, PORT, NAME} = require('./constants')
 
 // make a connection with the game server
 const connect = () => {
@@ -16,15 +16,14 @@ const connect = () => {
 
 	conn.on('connect', () => {
 		console.log(`connected to the server`);
-		conn.write('Name: APS')
+		conn.write(`Name: ${NAME}`)
 	})
-
 	
   return conn;
 
 };
 
-console.log('connecting...');
+console.log("Connecting ...");
 
 module.exports = {
   connect
