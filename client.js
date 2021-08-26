@@ -15,23 +15,7 @@ const connect = () => {
 
 	conn.on('connect', () => {
 		console.log(`connected to the server`);
-
 		conn.write('Name: APS')
-
-		// conn.write('Move: up');
-
-		// setTimeout( () => {
-		// 	conn.write('Move: left')
-		// }, 1000)
-		
-		// setTimeout( () => {
-		// 	conn.write('Move: down')
-		// }, 2000)
-		
-		// setInterval( () => {
-		// 	conn.write('Move: left')
-		// }, 500)
-
 	})
 
 	
